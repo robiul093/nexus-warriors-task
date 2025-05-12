@@ -1,0 +1,34 @@
+// 3.Task: Function Composition
+// Write three functions: one to square a number, one to double a number, and one to add 5 to a number. Compose these functions to create a new function that squares a number, doubles the result, and then adds 5.
+
+function squraeNumber (number) {
+    const result = number * number;
+
+    return result;
+};
+
+function doubleNumber (number) {
+    const result = number * 2;
+
+    return result;
+};
+
+function addFiveNumber (number) {
+    const result = number + 5;
+
+    return result;
+};
+
+ 
+
+function transformNumber (number) {
+    const square = squraeNumber(number);
+    const double = doubleNumber(square);
+    const addFive = addFiveNumber(double);
+
+    return addFive;
+};
+
+const result = transformNumber(3);
+
+console.log(result);
